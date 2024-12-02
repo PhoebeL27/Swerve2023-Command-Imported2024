@@ -2,7 +2,8 @@ package frc.robot.util.pid;
 
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.RelativeEncoder;
-//import com.revrobotics.SparkMaxRelativeEncoder;
+import com.revrobotics.CANSparkLowLevel;
+import com.revrobotics.SparkRelativeEncoder;
 //git test
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.wpilibj.DriverStation;
@@ -13,8 +14,8 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import java.util.function.Supplier;
 
-import static com.revrobotics.CANSparkMaxLowLevel.MotorType.kBrushed;
-import static com.revrobotics.CANSparkMaxLowLevel.MotorType.kBrushless;
+import static com.revrobotics.CANSparkLowLevel.MotorType.kBrushed;
+import static com.revrobotics.CANSparkLowLevel.MotorType.kBrushless;
 import static edu.wpi.first.math.MathUtil.clamp;
 
 /**
@@ -243,7 +244,7 @@ public class SparkMaxPIDSubsystem extends SubsystemBase {
         if (encoder == null && encoderAdapter != null) {
             return encoderAdapter.getPosition();
         } else {
-            assert encoder.equals(encoder) ;
+            assert encoder != null; 
             return encoder.getPosition();
         }
     }
@@ -270,12 +271,12 @@ public class SparkMaxPIDSubsystem extends SubsystemBase {
         this.tolerance = 0.5;
 
 
-       /* if (motor.getMotorType() == kBrushed) {
-            encoderAdapter = new RelativeEncoderAdapter(motor.getEncoder(SparkMaxRelativeEncoder.Type.kQuadrature, 2048));
+        if (motor.getMotorType() == kBrushed) {
+            encoderAdapter = new RelativeEncoderAdapter(motor.getEncoder(SparkRelativeEncoder.Type.kQuadrature, 2048));
             controller.enableContinuousInput(kI, kD);
         } else {
             encoder = motor.getEncoder();
-        } */
+        }
 
         targetRotation = getAdjustedPosition();
 

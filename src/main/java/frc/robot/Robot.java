@@ -13,8 +13,8 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import edu.wpi.first.wpilibj2.command.PrintCommand;
 import frc.robot.commands.auto.Autos;
-import frc.robot.subsystems.climber.ClimberArmSubsystem;
-import frc.robot.subsystems.climber.ClimberWristSubsystem;
+//import frc.robot.subsystems.climber.ClimberArmSubsystem;
+//import frc.robot.subsystems.climber.ClimberWristSubsystem;
 import frc.robot.subsystems.swerve.SwerveDriveSubsystem;
 import frc.robot.subsystems.vacuum.VacuumSubsystem;
 import frc.robot.subsystems.vision.CameraSubsystem;
@@ -35,8 +35,8 @@ public class Robot extends TimedRobot {
     private RobotContainer robotContainer;
 
     public static SwerveDriveSubsystem swerveDrive;
-    public static ClimberArmSubsystem arm;
-    public static ClimberWristSubsystem wrist;
+    //public static ClimberArmSubsystem arm;
+   // public static ClimberWristSubsystem wrist;
     public static VacuumSubsystem pump;
     public static CameraSubsystem camera;
     //public static PowerDistribution power;
@@ -61,8 +61,8 @@ public class Robot extends TimedRobot {
                 BR_MODULE,
                 CHASSIS_SIDE_LENGTH
         );
-        arm = new ClimberArmSubsystem();
-        wrist = new ClimberWristSubsystem();
+        //arm = new ClimberArmSubsystem();
+        //wrist = new ClimberWristSubsystem();
         pump = new VacuumSubsystem();
         //camera = new CameraSubsystem(CameraQuality.VERY_FAST);//.addCamera(
         //new PhotonCameraModule(CAMERA_CONFIG)
@@ -129,8 +129,8 @@ public class Robot extends TimedRobot {
     public void autonomousInit() {
         CommandScheduler.getInstance().cancelAll();
 
-        Robot.arm.getRotation().resetEncoder();
-        Robot.arm.getExtension().resetEncoder();
+       // Robot.arm.getRotation().resetEncoder();
+       // Robot.arm.getExtension().resetEncoder();
 
         Robot.swerveDrive.hasSetOffset = false;
 
@@ -171,8 +171,8 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void teleopPeriodic() {
-        Robot.arm.getExtension().translateMotor(deadzone(-RobotContainer.xbox.getLeftY() / 2, 0.1));
-        Robot.arm.getRotation().translateMotor(deadzone(-RobotContainer.xbox.getRightY(), 0.1));
+        //Robot.arm.getExtension().translateMotor(deadzone(-RobotContainer.xbox.getLeftY() / 2, 0.1));
+       // Robot.arm.getRotation().translateMotor(deadzone(-RobotContainer.xbox.getRightY(), 0.1));
     }
 
 

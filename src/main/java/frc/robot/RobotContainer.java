@@ -45,9 +45,9 @@ public class RobotContainer {
         }));
 
         // failsafe?
-        if (Robot.wrist.getTargetRotation() > 500) {
+        /*if (Robot.wrist.getTargetRotation() > 500) {
             Robot.wrist.setTarget(0);
-        }
+        }*/
     }
 
     /**
@@ -81,7 +81,7 @@ public class RobotContainer {
         xbox.x().onTrue(Commands.runOnce(() -> CLIMBER_PRESET_GROUP.setCurrentPreset(MID_CONE_INDEX)));
         xbox.povDown().onTrue(Commands.runOnce(() -> CLIMBER_PRESET_GROUP.setCurrentPreset(FLOOR_CONE_INDEX)));
         xbox.rightBumper().onTrue(Commands.runOnce(() -> CLIMBER_PRESET_GROUP.setCurrentPreset(HIGH_CONE_INDEX)));
-
+/* 
         xbox.rightTrigger().whileTrue(Commands.runEnd(() -> {
             Robot.wrist.translateMotor(-xbox.getRightTriggerAxis()/2);
         }, () -> {
@@ -103,6 +103,6 @@ public class RobotContainer {
         //xbox.leftBumper().onTrue(Commands.runOnce(() -> Robot.pump.toggleVacuum()));
     
         //xbox.povUp().onTrue(Robot.pump.openVacuumCommand());
-        xbox.povLeft().onTrue(Commands.runOnce(() -> CLIMBER_PRESET_GROUP.setCurrentPreset(MANUAL_STATION_INDEX)));
+        xbox.povLeft().onTrue(Commands.runOnce(() -> CLIMBER_PRESET_GROUP.setCurrentPreset(MANUAL_STATION_INDEX)));*/
     }
 }

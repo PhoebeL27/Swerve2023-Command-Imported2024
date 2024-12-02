@@ -8,7 +8,7 @@ import frc.robot.util.pid.SparkMaxPIDSubsystem;
 
 import static frc.robot.Constants.ClimberArmValues.*;
 import static frc.robot.Constants.ClimberPresets.*;
-
+/* 
 public class ClimberArmSubsystem extends SubsystemBase {
     private final SparkMaxPIDSubsystem extension;
     private final SparkMaxAngledPIDSubsystem rotation;
@@ -39,4 +39,4 @@ public class ClimberArmSubsystem extends SubsystemBase {
 
     public SparkMaxPIDSubsystem getExtension() { return extension; }
     public SparkMaxAngledPIDSubsystem getRotation() { return rotation; }
-}
+}*/
