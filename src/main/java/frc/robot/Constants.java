@@ -191,32 +191,32 @@ public final class Constants {
         public static final double CHASSIS_SIDE_LENGTH = 0.762;
 
         /** The Motor ID used for the Front Right Drive Motor. */
-        public static final int FR_DRIVE_ID = 4;
+        public static final int FR_DRIVE_ID = 17;
 
         /** The Motor ID used for the Front Left Drive Motor. */
-        public static final int FL_DRIVE_ID = 2;
+        public static final int FL_DRIVE_ID = 15;
 
         /** The Motor ID used for the Back Right Drive Motor. */
-        public static final int BR_DRIVE_ID = 8;
+        public static final int BR_DRIVE_ID = 11;
 
         
         /** The Motor ID used for the Back Left Drive Motor. */
-        public static final int BL_DRIVE_ID = 6;
+        public static final int BL_DRIVE_ID = 13;
 
         /** The Motor ID used for the Front Right Steering Motor. */
-        public static final int FR_TURN_ID = 3;
+        public static final int FR_TURN_ID = 18;
 
         /** The Motor ID used for the Front Left Steering Motor. */
-        public static final int FL_TURN_ID = 1;
+        public static final int FL_TURN_ID = 16;
 
         /** The Motor ID used for the Back Right Steering Motor. */
-        public static final int BR_TURN_ID = 7;
+        public static final int BR_TURN_ID = 12;
 
         /** The Motor ID used for the Back Left Steering Motor. */
-        public static final int BL_TURN_ID = 5;
+        public static final int BL_TURN_ID = 14;
 
         /** The ID used for the Front Right Absolute Encoder. */
-        public static final int FR_DIO_ENCODER_PORT = 1;
+        public static final int FR_DIO_ENCODER_PORT = 2;
 
         /** The ID used for the Front Left Absolute Encoder. */
         public static final int FL_DIO_ENCODER_PORT = 0;
@@ -225,7 +225,7 @@ public final class Constants {
         public static final int BR_DIO_ENCODER_PORT = 3;
 
         /** The ID used for the Back Left Absolute Encoder. */
-        public static final int BL_DIO_ENCODER_PORT = 2;
+        public static final int BL_DIO_ENCODER_PORT = 1;
 
         /** The Radius of each of the Swerve Drive Wheels in <b>meters.</b> */
         public static final double SWERVE_WHEEL_RADIUS = 0.0508;
